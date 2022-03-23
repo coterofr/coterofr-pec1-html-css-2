@@ -1,0 +1,368 @@
+/**
+ * Layout styles
+ */
+
+/* Se define el estilo del cuerpo de la página */
+
+#body {
+  color: $light-color;
+  background-color: $gray-bg;
+}
+
+/**
+ * Header styles
+ */
+
+/* Se define el estilo de la cabecera de la página */
+
+#header {
+
+  @extend %border;
+
+  @include center-content($width: 67%);
+
+  @include margin-top-bottom($margin-top: 30px, $margin-bottom: 40px);
+
+  @include color;
+
+  @include background-gradient;
+  position: sticky;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* Se define el estilo de la cabecera de la página para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #header {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la cabecera de la página para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #header {
+
+    @include width(80%);
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/**
+ * Main styles
+ */
+
+/* Se define el estilo del elemento main del cuerpo de la página */
+
+#main {
+
+  @include center-content;
+
+  @include color($color: $light-color, $background-color: $gray-bg);
+}
+
+/**
+ * Footer styles
+ */
+
+/* Se define el estilo del pie de página y sus elementos anidados */
+
+#footer {
+
+  @extend %border;
+
+  @include center-content($width: 67%);
+
+  @include padding;
+
+  @include margin-top-bottom($margin-top: 40px, $margin-bottom: 30px);
+
+  @include color;
+  bottom: 0;
+  font-size: 1.1rem;
+
+  a {
+    color: $light-color;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  img {
+    padding: 2px;
+    border-radius: 50px;
+  }
+}
+
+/* Se define el estilo del pie de página para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #footer {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo del pie de página para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #footer {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Contact styles
+ */
+
+/* Se define el estilo del modal de la información de contacto */
+
+#contact {
+
+  @extend %border;
+
+  @include center-content($width: 50%);
+
+  @include padding;
+
+  @include color;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  z-index: 1;
+  overflow: auto;
+  transform: translate(-50%,-50%);
+}
+
+/* Se define el estilo del cierre de la modal de la información de contacto */
+
+#cancel-contact {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  color: $gray-dark-color;
+  cursor: pointer;
+}
+
+/**
+ * Introduction styles
+ */
+
+/* Se define el estilo de la sección de introducción */
+
+#introduction-content {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de introducción para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #introduction-content {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de introducción para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #introduction-content {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Experience styles
+ */
+
+/* Se define el estilo de la sección de experiencia */
+
+#primary-content {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de experiencia para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #primary-content {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de experiencia para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #primary-content {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Education styles
+ */
+
+/* Se define el estilo de la sección de educación */
+
+#secondary-content {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de educación para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #secondary-content {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de educación para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #secondary-content {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Certification styles
+ */
+
+/* Se define el estilo de la sección de licencias y certificaciones */
+
+#tertiary-content {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de licencias y certificaciones para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #tertiary-content {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de licencias y certificaciones para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #tertiary-content {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Knowledge styles
+ */
+
+/* Se define el estilo de la sección de conocimientos y aptitudes */
+
+#quaternary-content {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de conocimientos y aptitudes para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #quaternary-content {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de conocimientos y aptitudes para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #quaternary-content {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Final extra styles
+ */
+
+/* Se define el estilo de la sección de más información */
+
+.ly-extra {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la sección de más información para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  .ly-extra {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la sección de más información para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  .ly-extra {
+
+    @include width(80%);
+  }
+}
+
+/* Se define el estilo del artículo de idiomas */
+
+#final-content {
+
+  @extend %border;
+
+  @include padding;
+}
+
+/* Se define el estilo del artículo de proyectos */
+
+#extra-content {
+
+  @extend %border;
+
+  @include padding;
+}

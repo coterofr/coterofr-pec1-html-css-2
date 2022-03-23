@@ -1,0 +1,375 @@
+/**
+ * State styles
+ * Cambio de estados de los elementos en caso de que el usuario
+ * pase con el ratón por encima de estos, en caso de ser un elemento en
+ * primera posición, última posición o en una posición concreta dentro de un conjunto de elementos
+ * y también con el ancho de pantalla máximo de pantalla determinado
+ */
+
+/* Se ocultan los elementos con esta clase */
+
+.is-hidden {
+  display: none;
+}
+
+%view-link-action:hover {
+  color: $blue-light-color;
+}
+
+%view-section-action:hover {
+  color: $blue-light-color;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: bold;
+  color: $blue-light-color;
+  border-bottom: 2px solid $blue-light-color;
+}
+
+dl:hover {
+
+  @include background-gradient;
+}
+
+dd:last-child {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+
+section:hover {
+  cursor: pointer;
+}
+
+/**
+ * Header styles
+ */
+
+#header:hover {
+
+  @extend %shadow-hover;
+  cursor: pointer;
+
+  .photo-img {
+    content: url("../images/photo-2.jpg");
+  }
+}
+
+/**
+ * Footer styles
+ */
+
+#footer:hover {
+
+  @extend %shadow-hover;
+  cursor: pointer;
+
+  .link-footer:hover {
+    font-weight: normal;
+    color: $blue-light-color;
+    border-bottom: none;
+  }
+}
+
+.nav {
+
+  ul:last-child {
+    padding-top: 5px;
+    text-align: left;
+
+    li {
+      display: inline-block;
+      margin: 15px 2px 0 0;
+    }
+  }
+
+  ul:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  ul:first-child > li:nth-of-type(1),
+  ul:first-child > li:nth-of-type(2),
+  ul:first-child > li:nth-of-type(3) {
+    padding-right: 8px;
+  }
+
+  ul:first-child > li:nth-of-type(2)::before,
+  ul:first-child > li:nth-of-type(3)::before,
+  ul:first-child > li:nth-of-type(4)::before {
+    padding-right: 8px;
+    color: $light-color;
+    content: "•";
+  }
+
+  a:hover {
+    border-bottom: none;
+  }
+
+  img:hover {
+    background-color: $blue-light-color;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .nav {
+
+    ul:last-child {
+      text-align: center;
+    }
+
+    ul:first-child {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    ul:first-child > li:nth-of-type(1),
+    ul:first-child > li:nth-of-type(2),
+    ul:first-child > li:nth-of-type(3) {
+      padding-right: 0;
+      padding-bottom: 3px;
+    }
+
+    ul:first-child > li:nth-of-type(2)::before,
+    ul:first-child > li:nth-of-type(3)::before,
+    ul:first-child > li:nth-of-type(4)::before {
+      padding-right: 0;
+      content: "";
+    }
+  }
+}
+
+/**
+ * Contact styles
+ */
+
+#contact:hover {
+
+  @extend %shadow-hover;
+}
+
+.data-contact:hover {
+
+  @include background-gradient;
+}
+
+#cancel-contact:hover {
+  color: $light-color;
+}
+
+/**
+ * Introduction styles
+ */
+
+#introduction-content:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  #introduction-content:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #introduction-content:hover {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Experience styles
+ */
+
+#primary-content:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  #primary-content:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #primary-content:hover {
+
+    @include width(80%);
+  }
+}
+
+.business:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.business-list-item:hover {
+
+  @include background-gradient($color1: $dark-light-color,$color2: $shadow-color);
+  border-top: 1px solid $gray-dark-color;
+  border-right: 1px solid $gray-dark-color;
+  border-bottom: 1px solid $gray-dark-color;
+}
+
+/**
+ * Education styles
+ */
+
+#secondary-content:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  #secondary-content:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #secondary-content:hover {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Certification styles
+ */
+
+#tertiary-content:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  #tertiary-content:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #tertiary-content:hover {
+
+    @include width(80%);
+  }
+}
+
+.in-process:hover {
+  cursor: pointer;
+
+  .process {
+    display: inline;
+  }
+}
+
+.cert:hover {
+
+  @include background-gradient($color2: $blue-light-color);
+}
+
+.button-link:hover {
+
+  @include background-gradient($color1: $blue-color,$color2: $blue-light-color);
+  color: $light-color;
+  border-color: $light-color;
+}
+
+/**
+ * Knowledge styles
+ */
+
+#quaternary-content:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  #quaternary-content:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #quaternary-content:hover {
+
+    @include width(80%);
+  }
+}
+
+.knowledge-list-item:hover,
+.technology-list-item:hover,
+.list-item:hover {
+
+  @include background-gradient($color2: $blue-light-color);
+}
+
+/**
+ * Final extra styles
+ */
+
+.ly-extra:hover {
+
+  @extend %shadow-hover;
+
+  @include width;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  .ly-extra:hover {
+
+    @include width(75%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .ly-extra:hover {
+
+    @include width(80%);
+  }
+}
+
+#final-content:hover {
+
+  @extend %shadow-hover;
+}
+
+#extra-content:hover {
+
+  @extend %shadow-hover;
+}

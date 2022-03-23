@@ -1,0 +1,58 @@
+/**
+ * Functions styles
+ */
+
+/* Función que centra el contenido */
+
+@mixin center-content($width: 100%) {
+  width: $width;
+  margin: $margin-center;
+}
+
+/* Función que especifica un ancho determinado */
+
+@mixin width($width: 67%) {
+  width: $width;
+}
+
+/* Función que especifica un relleno determinado */
+
+@mixin padding($padding: 30px) {
+  padding: $padding;
+}
+
+/* Función que especifica un margen inferior y superior determinado */
+
+@mixin margin-top-bottom($margin-top: 10px, $margin-bottom: 10px) {
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+}
+
+/* Función que especifica un margen izquierdo y derecho determinado */
+
+@mixin margin-right-left($margin-right: 10px, $margin-left: 10px) {
+  margin-right: $margin-right;
+  margin-left: $margin-left;
+}
+
+/* Función que especifica las propiedades del grid determinadas */
+
+@mixin grid($display: grid, $grid-template-columns: 1fr 1fr, $row-gap: 10px, $column-gap: 10px) {
+  display: $display;
+  grid-template-columns: $grid-template-columns;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+/* Función que especifica un color y fondo determinado */
+
+@mixin color($color: $light-color, $background-color: $dark-light-color) {
+  color: $color;
+  background-color: $background-color;
+}
+
+/* Función que especifica un gradiente determinado */
+
+@mixin background-gradient($color1: $dark-light-color, $color2: $shadow-color) {
+  background-image: linear-gradient(to bottom right,$color1,$color2);
+}

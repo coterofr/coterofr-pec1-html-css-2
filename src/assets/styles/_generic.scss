@@ -1,0 +1,41 @@
+/**
+ * Generic styles
+ */
+
+.subtitle {
+  font-size: 1.2rem;
+}
+
+.gray-data {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: $gray-dark-color;
+}
+
+.blue-data {
+  color: $blue-light-color;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.in-line {
+  display: inline;
+}
+
+.mg-tp-10 {
+  margin-top: 10px;
+}
+
+.pd-tp-5 {
+  padding-top: 5px;
+}

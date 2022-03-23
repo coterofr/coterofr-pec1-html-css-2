@@ -1,0 +1,326 @@
+/**
+ * Module styles
+ */
+
+@use "images";
+
+/**
+ * Header styles
+ */
+
+/* Estilo del cuerpo de la foto */
+
+.photo {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Estilo de la imagen de la foto y para el ancho de pantalla máximo especificado */
+
+.photo-img {
+  width: images.$width-photo;
+  height: images.$height-photo;
+  border: 1px solid $gray-dark-color;
+  border-radius: images.$border-radius-photo;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .photo-img {
+    width: images.$width-photo-higher;
+    height: images.$height-photo-higher;
+  }
+}
+
+/* Estilo del título de la foto */
+
+.photo-title {
+  font-size: .9rem;
+  text-align: center;
+}
+
+/* Estilo de las listas de datos y para el ancho de pantalla máximo definido */
+
+.data-list {
+  flex: 3;
+  background: transparent;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .data-list {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Estilo de los elementos de las listas de datos */
+
+.data-list-element {
+
+  @include margin-top-bottom($margin-top: 3px, $margin-bottom: 3px);
+  font-size: 1.1rem;
+  background: transparent;
+}
+
+/* Estilo del nombre de usuario de la página */
+
+.user-name {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $light-color;
+}
+
+/* Estilo del elemento de la lista correspondiente al contacto */
+
+.data-list-contact {
+  margin-top: 10px;
+}
+
+/* Estilo de los iconos */
+
+.icon {
+  color: $blue-light-color;
+}
+
+/**
+ * Footer styles
+ * Estilos correspondientes al menú de navegación y el elemento de copyright
+ */
+
+.nav {
+  text-align: left;
+}
+
+.copy {
+  padding-top: 20px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .copy {
+    text-align: center;
+  }
+}
+
+/**
+ * Introduction styles
+ * Estilos correspondientes a los links de leer más y menos contenido
+ */
+
+.read-more-about,
+.read-less-about {
+
+  @extend %view-link-action;
+}
+
+/**
+ * Experience styles
+ * Estilos correspondientes a los elementos de la sección de la experiencia, referenciando
+ * a los elementos de las listas correspondientes a los cargos de la experiencia laboral y sus
+ * imágenes correspondientes
+ */
+
+.business {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray-dark-color;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  margin-bottom: 15px;
+}
+
+.business-img {
+  width: images.$width-business-img;
+  height: images.$width-business-img;
+  margin-right: 15px;
+  border: 1px solid $gray-dark-color;
+  border-radius: images.$border-radius-business-img;
+  object-fit: cover;
+  object-position: center;
+}
+
+.business-list-item {
+  padding: 1px 15px 10px 30px;
+  margin-top: 15px;
+  border-left: 2px solid $gray-dark-color;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.view-more-business,
+.view-less-business {
+
+  @extend %view-link-action;
+
+  margin-left: 35px;
+}
+
+/**
+ * Education styles
+ * Estilos correspondientes a los elementos de la sección de educación, referenciando
+ * a los elementos que referencian a los centros y al elemento que indica que está en proceso
+ */
+
+.center {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray-dark-color;
+}
+
+.process {
+
+  @include background-gradient($color1: $blue-light-color, $color2: $blue-bg);
+  display: none;
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: .9rem;
+  font-weight: bold;
+  color: $blue-dark-color;
+  border: 1px solid $light-color;
+  border-radius: 10px;
+}
+
+.view-more-center,
+.view-less-center {
+
+  @extend %view-section-action;
+}
+
+/**
+ * Certification styles
+ * Estilos correspondientes a los elementos de la sección de certificaciones, referenciando
+ * a los elementos que referencian a las certificaciones, los botones de las credenciales y
+ * a los elementos que indican la visualización de más o menos elementos
+ */
+
+.cert {
+
+  @include padding($padding: 15px);
+  margin-bottom: 20px;
+  border: 2px solid $gray-dark-color;
+  border-radius: 10px;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-top: 15px;
+  color: $blue-color;
+  background-color: $blue-bg;
+  border: 2px solid $blue-light-color;
+  border-radius: 10px;
+}
+
+.view-more-cert,
+.view-less-cert {
+
+  @extend %view-section-action;
+}
+
+/**
+ * Knowledge styles
+ * Estilos correspondientes a los elementos de la sección de conocimientos y aptitudes,
+ * referenciando a los elementos que referencian a las listas, sus elementos y
+ * a los elementos que indican la visualización de más o menos elementos
+ */
+
+.knowledge {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  .knowledge {
+
+    @include grid($display: grid, $grid-template-columns: 1fr 1fr, $row-gap: 20px, $column-gap: 10px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .knowledge {
+
+    @include grid($display: grid, $grid-template-columns: 1fr, $row-gap: 20px, $column-gap: 10px);
+  }
+}
+
+.knowledge-list {
+
+  @include padding($padding: 15px);
+
+  @include margin-right-left($margin-right: 5px, $margin-left: 5px);
+  border: 2px solid $gray-dark-color;
+  border-radius: 10px;
+}
+
+.knowledge-list-item,
+.technology-list-item,
+.list-item {
+
+  @include padding($padding: 10px);
+  border-bottom: 1px solid $gray-dark-color;
+}
+
+.view-more-knowledge,
+.view-less-knowledge {
+
+  @extend %view-link-action;
+}
+
+.technology-list {
+
+  @include padding($padding: 15px);
+
+  @include margin-right-left($margin-right: 5px, $margin-left: 5px);
+  border: 2px solid $gray-dark-color;
+  border-radius: 10px;
+}
+
+.view-more-technology,
+.view-less-technology {
+
+  @extend %view-link-action;
+}
+
+.list {
+
+  @include padding($padding: 15px);
+
+  @include margin-right-left($margin-right: 5px, $margin-left: 5px);
+  border: 2px solid $gray-dark-color;
+  border-radius: 10px;
+}
+
+/**
+ * Final extra styles
+ */
+
+/* Estilo de la sección de más información, representándola en un grid */
+
+.final-extra-content {
+
+  @include grid($display: grid, $grid-template-columns: 1fr 1fr, $row-gap: 10px, $column-gap: 20px);
+}
+
+@media only screen and (max-width: 1150px) {
+
+  .final-extra-content {
+
+    @include grid($display: grid, $grid-template-columns: 1fr, $row-gap: 20px, $column-gap: 10px);
+  }
+}

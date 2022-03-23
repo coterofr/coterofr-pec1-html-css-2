@@ -1,0 +1,50 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+/**
+ * Import variables
+ */
+
+@import "variables";
+
+/**
+ * Import generic styles, functions and inheritance
+ */
+
+@import "generic";
+
+@import "functions";
+
+@import "inheritance";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+
+@import "layouts/base";
+
+@import "layouts/layout";
+
+@import "layouts/module";
+
+@import "layouts/state";
+
+@import "layouts/theme";
+
+/**
+ * Do NOT include anything else in this file!
+ */

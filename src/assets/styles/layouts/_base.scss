@@ -1,0 +1,107 @@
+/**
+ * Base styles
+ */
+
+/* Se define el tamaño de fuente genérico */
+
+html {
+  font-size: $font-size;
+}
+
+/* Se define el tipo de fuente de fuente genérico */
+
+* {
+  font-family: $font-family-app;
+}
+
+/* Se define el ancho y margen del cuerpo de la página */
+
+body {
+  width: 100%;
+  margin: $margin-center;
+}
+
+/* Se define el margen y color de fondo de las secciones */
+
+section {
+
+  @include margin-top-bottom($margin-top: 20px, $margin-bottom: 20px);
+  background-color: $dark-light-color;
+}
+
+/* Se define el estilo de los links genéricos */
+
+a {
+  font-size: 1rem;
+  color: $light-color;
+  text-decoration: none;
+}
+
+/* Se define el estilo de los títulos de primer nivel */
+
+h1 {
+
+  @include margin-top-bottom($margin-top: 5px, $margin-bottom: 20px);
+  font-size: 2rem;
+  border-bottom: 2px solid $light-color;
+}
+
+/* Se define el estilo de los títulos de segundo nivel y los links de estos */
+
+h2,
+h2 a {
+
+  @include margin-top-bottom($margin-top: 10px, $margin-bottom: 15px);
+  font-size: 1.5rem;
+}
+
+/* Se define el estilo de los títulos de tercer nivel */
+
+h3 {
+
+  @include margin-top-bottom;
+  font-size: 1.2rem;
+}
+
+/* Se define el estilo de los párrafos */
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Se define el estilo de las listas no ordenadas */
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+/* Se define el estilo de las listas de descripción */
+
+dl {
+  padding: 15px;
+  border: 1px solid $gray-dark-color;
+  border-radius: 15px;
+}
+
+/* Se define el estilo de los términos de las listas de descripción */
+
+dt {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Se define el estilo de las descripciones de las listas de descripción */
+
+dd {
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  color: $gray-dark-color;
+  border-bottom: 1px solid $gray-dark-color;
+}
