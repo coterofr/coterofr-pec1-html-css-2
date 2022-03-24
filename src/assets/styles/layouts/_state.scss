@@ -8,13 +8,9 @@
 
 /* Se ocultan los elementos con esta clase */
 
-.is-hidden {
-  display: none;
-}
+.is-hidden { display: none; }
 
-%view-link-action:hover {
-  color: $blue-light-color;
-}
+%view-link-action:hover { color: $blue-light-color; }
 
 %view-section-action:hover {
   color: $blue-light-color;
@@ -38,9 +34,7 @@ dd:last-child {
   border-bottom: none;
 }
 
-section:hover {
-  cursor: pointer;
-}
+section:hover { cursor: pointer; }
 
 /**
  * Header styles
@@ -105,22 +99,16 @@ section:hover {
     content: "•";
   }
 
-  a:hover {
-    border-bottom: none;
-  }
+  a:hover { border-bottom: none; }
 
-  img:hover {
-    background-color: $blue-light-color;
-  }
+  img:hover { background-color: $blue-light-color; }
 }
 
 @media only screen and (max-width: 700px) {
 
   .nav {
 
-    ul:last-child {
-      text-align: center;
-    }
+    ul:last-child { text-align: center; }
 
     ul:first-child {
       flex-direction: column;
@@ -157,9 +145,7 @@ section:hover {
   @include background-gradient;
 }
 
-#cancel-contact:hover {
-  color: $light-color;
-}
+#cancel-contact:hover { color: $light-color; }
 
 /**
  * Introduction styles

@@ -53,6 +53,4 @@
 
 /* Estilo heredado que especifica un estilo al sombreado */
 
-%shadow-hover {
-  box-shadow: 2px 2px 20px $dark-color;
-}
+%shadow-hover { box-shadow: 2px 2px 20px $dark-color; }

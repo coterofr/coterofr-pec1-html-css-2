@@ -11,15 +11,11 @@
 
 /* Función que especifica un ancho determinado */
 
-@mixin width($width: 67%) {
-  width: $width;
-}
+@mixin width($width: 67%) { width: $width; }
 
 /* Función que especifica un relleno determinado */
 
-@mixin padding($padding: 30px) {
-  padding: $padding;
-}
+@mixin padding($padding: 30px) { padding: $padding; }
 
 /* Función que especifica un margen inferior y superior determinado */
 
@@ -53,6 +49,4 @@
 
 /* Función que especifica un gradiente determinado */
 
-@mixin background-gradient($color1: $dark-light-color, $color2: $shadow-color) {
-  background-image: linear-gradient(to bottom right,$color1,$color2);
-}
+@mixin background-gradient($color1: $dark-light-color, $color2: $shadow-color) { background-image: linear-gradient(to bottom right,$color1,$color2); }

@@ -4,15 +4,11 @@
 
 /* Se define el tamaño de fuente genérico */
 
-html {
-  font-size: $font-size;
-}
+html { font-size: $font-size; }
 
 /* Se define el tipo de fuente de fuente genérico */
 
-* {
-  font-family: $font-family-app;
-}
+* { font-family: $font-family-app; }
 
 /* Se define el ancho y margen del cuerpo de la página */
 
