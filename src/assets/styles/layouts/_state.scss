@@ -1,9 +1,9 @@
 /**
  * State styles
- * Cambio de estados de los elementos en caso de que el usuario
+ * Cambio de estado de los elementos en caso de que el usuario
  * pase con el ratón por encima de estos, en caso de ser un elemento en
  * primera posición, última posición o en una posición concreta dentro de un conjunto de elementos
- * y también con el ancho de pantalla máximo de pantalla determinado
+ * y también con el ancho de pantalla máximo determinado
  */
 
 /* Se ocultan los elementos con esta clase */
@@ -272,9 +272,7 @@ section:hover { cursor: pointer; }
 .in-process:hover {
   cursor: pointer;
 
-  .process {
-    display: inline;
-  }
+  .process { display: inline; }
 }
 
 .cert:hover {

@@ -156,7 +156,6 @@
 .view-less-business {
 
   @extend %view-link-action;
-
   margin-left: 35px;
 }
 
@@ -304,7 +303,7 @@
  * Final extra styles
  */
 
-/* Estilo de la sección de más información, representándola en un grid */
+/* Estilo de la sección de más información, representándola en un grid a través de sus propiedades */
 
 .final-extra-content {
 
